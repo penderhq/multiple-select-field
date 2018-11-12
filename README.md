@@ -1,16 +1,8 @@
-# multiple-select-field
+# ![MultipleSelectField](https://user-images.githubusercontent.com/44801418/48110016-73b71300-e27c-11e8-9d6d-3640406cec9d.png) MultipleSelectField
 
-[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
-Describe multiple-select-field here.
+Used for selecting multiple options from a list.		
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[npm-badge]: https://img.shields.io/npm/v/@cmds/multiple-select-field.svg
+[npm]: https://www.npmjs.org/package/@cmds/multiple-select-field
