@@ -7,7 +7,9 @@ export default class MultipleSelectField extends React.Component {
     static propTypes = {
         optionIds: PropTypes.arrayOf(PropTypes.string.isRequired),
         options: PropTypes.shape({
-            options: PropTypes.arrayOf(PropTypes.string.isRequired)
+            coloredOptions: PropTypes.bool.isRequired,
+            optionsById: PropTypes.object.isRequired,
+            options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
         })
     }
 
