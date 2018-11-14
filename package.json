@@ -1,6 +1,6 @@
 {
   "name": "@cmds/multiple-select-field",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Used for selecting multiple options from a list.",
   "main": "lib/index.js",
   "module": "es/index.js",
