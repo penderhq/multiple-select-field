@@ -46,8 +46,8 @@ args: ${stringifyJSON(args)}
 
 const FIELD_OPTIONS = {
     coloredOptions: true,
-    options: ['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6'],
-    optionsById: {
+    optionOrder: ['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6'],
+    options: {
         'opt1': {
             id: 'opt1',
             colorId: 'blue.base',

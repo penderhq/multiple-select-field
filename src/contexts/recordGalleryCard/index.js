@@ -93,7 +93,7 @@ export default class RecordGalleryCard extends React.Component {
             <OptionList>
                 {optionIds.map(id => {
 
-                    const option = options.optionsById[id]
+                    const option = options.options[id]
 
                     return (
                         <Option
