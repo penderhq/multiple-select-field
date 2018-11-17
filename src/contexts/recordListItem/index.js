@@ -81,7 +81,7 @@ const OptionList = ({children}) => (
     </div>
 )
 
-export default class RecordGalleryCard extends React.Component {
+export default class RecordListItem extends React.Component {
 
     render() {
 
