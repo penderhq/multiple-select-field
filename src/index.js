@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import RecordDetailEditor from './contexts/recordDetail/editor'
 import RecordDetailReadOnly from './contexts/recordDetail/readOnly'
 import RecordGalleryCard from './contexts/recordGalleryCard'
 import RecordListItem from './contexts/recordListItem'
@@ -12,7 +13,13 @@ export default class MultipleSelectField extends React.Component {
         roleId: PropTypes.oneOf(['editor', 'readOnly']),
         optionIds: PropTypes.arrayOf(PropTypes.string.isRequired),
         coloredOptions: PropTypes.bool.isRequired,
-        options: PropTypes.object.isRequired,
+        options: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                colorId: PropTypes.string,
+                name: PropTypes.string.isRequired
+            })
+        ),
         optionOrder: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
         onLink: PropTypes.func,
         onUnlink: PropTypes.func,
@@ -23,6 +30,15 @@ export default class MultipleSelectField extends React.Component {
     render() {
 
         const {contextId, roleId} = this.props
+
+        if (contextId === 'recordDetail' && roleId === 'editor') {
+
+            return (
+                <RecordDetailEditor
+                    {...this.props}
+                />
+            )
+        }
 
         if (contextId === 'recordDetail' && roleId === 'readOnly') {
 

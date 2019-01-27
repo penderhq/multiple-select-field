@@ -1,6 +1,6 @@
 {
   "name": "@cmds/multiple-select-field",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Used for selecting multiple options from a list.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "@cmds/colors": "^0.3.0",
-    "emotion": "^9.2.12",
+    "@cmds/select": "^0.4.0",
+    "emotion": "^10.0.6",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2"
   },

@@ -112,13 +112,18 @@ export default class RecordListItem extends React.Component {
 
         const {optionIds, options} = this.props
 
+        const optionsById = options.reduce((result, option) => {
+            result[option.id] = option
+            return result
+        }, {})
+
         if (!optionIds) return null
 
         return (
             <OptionList>
                 {optionIds.map(id => {
 
-                    const option = options[id]
+                    const option = optionsById[id]
 
                     return (
                         <Option
