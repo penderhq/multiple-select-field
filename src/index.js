@@ -20,7 +20,6 @@ export default class MultipleSelectField extends React.Component {
                 name: PropTypes.string.isRequired
             })
         ),
-        optionOrder: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
         onLink: PropTypes.func,
         onUnlink: PropTypes.func,
         onClear: PropTypes.func,

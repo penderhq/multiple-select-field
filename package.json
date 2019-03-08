@@ -1,6 +1,6 @@
 {
   "name": "@cmds/multiple-select-field",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Used for selecting multiple options from a list.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,16 +21,22 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "@cmds/colors": "^0.3.0",
-    "@cmds/select": "^0.4.0",
-    "emotion": "^10.0.6",
-    "lodash": "^4.17.11",
     "prop-types": "^15.6.2"
   },
   "peerDependencies": {
+    "@cmds/button": "0.x",
+    "@cmds/colors": "0.x",
+    "@cmds/select": "0.x",
+    "emotion": "10.x",
+    "lodash": "4.x",
     "react": "16.x"
   },
   "devDependencies": {
+    "@cmds/button": "^0.x",
+    "@cmds/colors": "^0.x",
+    "@cmds/select": "^0.5.0",
+    "emotion": "^10.x",
+    "lodash": "^4.x",
     "nwb": "0.23.x",
     "react": "^16.6.1",
     "react-dom": "^16.6.1"
