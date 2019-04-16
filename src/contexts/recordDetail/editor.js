@@ -2,7 +2,7 @@ import React from 'react'
 import {css} from 'emotion'
 import colors from '@cmds/colors'
 import Button from '@cmds/button'
-import OptionList from '@cmds/select/es/OptionList'
+import OptionList from '@cmds/select/lib/OptionList'
 import Option from '../../Option'
 
 
