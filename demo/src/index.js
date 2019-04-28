@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {render} from 'react-dom'
 import {css, injectGlobal} from 'emotion'
 import MultipleSelectField from '../../src'
+import {Canvas, Heading, Paragraph, Box} from '@cmds/demo-utils'
 
 injectGlobal`
     * {
@@ -115,18 +116,14 @@ class Demo extends Component {
     }
 
     render() {
-        return <div>
-            <h1>MultipleSelectField Demo</h1>
-            <p>Used for selecting multiple options from a list.</p>
-            <h2>
-                Without options selected
-            </h2>
-            <Context contextId={'recordDetail'} roleId={'editor'}/>
-            <div
-                className={css`
-                    width: 240px;
-                `}
-            >
+        return <Canvas>
+            <Heading>
+                Record Detail Context
+            </Heading>
+            <Paragraph>
+                Without options selected and editor role
+            </Paragraph>
+            <Box>
                 <MultipleSelectField
                     id={'fld1'}
                     contextId={'recordDetail'}
@@ -138,14 +135,11 @@ class Demo extends Component {
                     onOptionLink={this.handleOptionLink}
                     onOptionUnlink={this.handleOptionUnlink}
                 />
-            </div>
-            <Context contextId={'recordDetail'} roleId={'readOnly'}/>
-            <div
-                className={css`
-                    width: 240px;
-                    height: 22px;
-                `}
-            >
+            </Box>
+            <Paragraph>
+                Without options selected and read only role
+            </Paragraph>
+            <Box>
                 <MultipleSelectField
                     id={'fld1'}
                     contextId={'recordDetail'}
@@ -155,54 +149,11 @@ class Demo extends Component {
                     optionOrder={['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6']}
                     options={FIELD_OPTIONS}
                 />
-            </div>
-            <Context contextId={'recordGalleryCard'} roleId={'readOnly'}/>
-            <div
-                className={css`
-                        width: 240px;
-                        height: 22px;
-                    `}
-            >
-                <MultipleSelectField
-                    id={'fld1'}
-                    contextId={'recordGalleryCard'}
-                    roleId={'readOnly'}
-                    optionIds={this.state.optionIds}
-                    coloredOptions={true}
-                    optionOrder={['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6']}
-                    options={FIELD_OPTIONS}
-                />
-            </div>
-            <Context contextId={'recordListItem'} roleId={'readOnly'}/>
-            <div
-                className={css`
-                    width: 240px;
-                    height: 22px;
-                `}
-            >
-                <MultipleSelectField
-                    id={'fld1'}
-                    contextId={'recordListItem'}
-                    roleId={'readOnly'}
-                    optionIds={this.state.optionIds}
-                    coloredOptions={true}
-                    optionOrder={['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6']}
-                    options={FIELD_OPTIONS}
-                />
-            </div>
-            <h2>
-                With options selected
-            </h2>
-            <Context contextId={'recordDetail'} roleId={'readOnly'}/>
-            <div
-                className={css`
-                    width: 460px;
-                    min-height: 18px;
-                    position: relative;
-                    overflow: visible;
-                    display: block;
-                `}
-            >
+            </Box>
+            <Paragraph>
+                With options selected and read only role
+            </Paragraph>
+            <Box>
                 <MultipleSelectField
                     id={'fld1'}
                     contextId={'recordDetail'}
@@ -212,14 +163,28 @@ class Demo extends Component {
                     optionOrder={['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6']}
                     options={FIELD_OPTIONS}
                 />
-            </div>
-            <Context contextId={'recordGalleryCard'} roleId={'readOnly'}/>
-            <div
-                className={css`
-                    width: 240px;
-                    height: 22px;
-                `}
-            >
+            </Box>
+            <Heading>
+                Record Gallery Card Context
+            </Heading>
+            <Paragraph>
+                Without options selected and read only role
+            </Paragraph>
+            <Box>
+                <MultipleSelectField
+                    id={'fld1'}
+                    contextId={'recordGalleryCard'}
+                    roleId={'readOnly'}
+                    optionIds={this.state.optionIds}
+                    coloredOptions={true}
+                    optionOrder={['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6']}
+                    options={FIELD_OPTIONS}
+                />
+            </Box>
+            <Paragraph>
+                With options selected and read only role
+            </Paragraph>
+            <Box>
                 <MultipleSelectField
                     id={'fld1'}
                     contextId={'recordGalleryCard'}
@@ -229,14 +194,28 @@ class Demo extends Component {
                     optionOrder={['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6']}
                     options={FIELD_OPTIONS}
                 />
-            </div>
-            <Context contextId={'recordListItem'} roleId={'readOnly'}/>
-            <div
-                className={css`
-                        width: 240px;
-                        height: 22px;
-                    `}
-            >
+            </Box>
+            <Heading>
+                Record List Item Context
+            </Heading>
+            <Paragraph>
+                Without options selected and read only role
+            </Paragraph>
+            <Box>
+                <MultipleSelectField
+                    id={'fld1'}
+                    contextId={'recordListItem'}
+                    roleId={'readOnly'}
+                    optionIds={this.state.optionIds}
+                    coloredOptions={true}
+                    optionOrder={['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6']}
+                    options={FIELD_OPTIONS}
+                />
+            </Box>
+            <Paragraph>
+                With options selected and read only role
+            </Paragraph>
+            <Box>
                 <MultipleSelectField
                     id={'fld1'}
                     contextId={'recordListItem'}
@@ -246,8 +225,8 @@ class Demo extends Component {
                     optionOrder={['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6']}
                     options={FIELD_OPTIONS}
                 />
-            </div>
-        </div>
+            </Box>
+        </Canvas>
     }
 }
 
