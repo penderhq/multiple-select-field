@@ -1,7 +1,7 @@
 import React from 'react'
 import {css, cx} from 'emotion'
 import get from 'lodash/get'
-import colors from '@cmds/colors'
+import colors from '@pndr/colors'
 import icons from './icons'
 
 export default ({className, option, onRemove}) => (

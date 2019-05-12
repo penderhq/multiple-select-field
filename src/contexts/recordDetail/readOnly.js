@@ -1,9 +1,10 @@
 import React from 'react'
-import {css} from 'emotion'
-import colors from '@cmds/colors'
+import { css } from 'emotion'
+import colors from '@pndr/colors'
 import get from 'lodash/get'
+import defaultEmptyRenderer from '../../defaultEmptyRenderer';
 
-const Option = ({option}) => (
+const Option = ({ option }) => (
     <div
         className={css`
             max-width: 100%;
@@ -53,7 +54,7 @@ const Option = ({option}) => (
     </div>
 )
 
-const OptionList = ({children}) => (
+const OptionList = ({ children }) => (
     <div
         className={css`
             font-size: 13px;
@@ -110,14 +111,14 @@ export default class RecordListItem extends React.Component {
 
     render() {
 
-        const {optionIds, options} = this.props
+        const { optionIds, options } = this.props
 
         const optionsById = options.reduce((result, option) => {
             result[option.id] = option
             return result
         }, {})
 
-        if (!optionIds) return null
+        if (!optionIds || !optionIds.length) return defaultEmptyRenderer()
 
         return (
             <OptionList>

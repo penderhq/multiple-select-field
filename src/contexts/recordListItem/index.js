@@ -1,7 +1,8 @@
 import React from 'react'
 import {css} from 'emotion'
-import colors from '@cmds/colors'
+import colors from '@pndr/colors'
 import get from 'lodash/get'
+import defaultEmptyRenderer from '../../defaultEmptyRenderer'
 
 const Option = ({option}) => (
     <div
@@ -92,7 +93,7 @@ export default class RecordListItem extends React.Component {
             return result
         }, {})
 
-        if (!optionIds) return null
+        if (!optionIds || !optionIds.length) return defaultEmptyRenderer()
 
         return (
             <OptionList>

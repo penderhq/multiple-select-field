@@ -1,6 +1,6 @@
 {
-  "name": "@cmds/multiple-select-field",
-  "version": "0.9.0",
+  "name": "@pndr/multiple-select-field",
+  "version": "0.10.0",
   "description": "Used for selecting multiple options from a list.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,7 +11,7 @@
     "umd"
   ],
   "scripts": {
-    "deploy": "cd demo/dist && surge --project ./ --domain cmds-multiple-select-field.surge.sh",
+    "deploy": "cd demo/dist && surge --project ./ --domain pndr-multiple-select-field.surge.sh",
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
@@ -24,18 +24,18 @@
     "prop-types": "^15.6.2"
   },
   "peerDependencies": {
-    "@cmds/button": "0.x",
-    "@cmds/colors": "0.x",
-    "@cmds/select": "0.x",
+    "@pndr/button": "0.x",
+    "@pndr/colors": "0.x",
+    "@pndr/select": "0.x",
     "emotion": "10.x",
     "lodash": "4.x",
     "react": "16.x"
   },
   "devDependencies": {
-    "@cmds/button": "^0.2.0",
-    "@cmds/colors": "^0.x",
-    "@cmds/demo-utils": "^0.2.0",
-    "@cmds/select": "^0.5.0",
+    "@pndr/button": "^0.5.0",
+    "@pndr/colors": "^0.4.0",
+    "@pndr/demo-utils": "^0.3.0",
+    "@pndr/select": "^0.7.0",
     "emotion": "^10.0.9",
     "lodash": "^4.x",
     "nwb": "0.23.x",
@@ -43,9 +43,9 @@
     "react-dom": "^16.6.1"
   },
   "author": "keyflight",
-  "homepage": "https://entercosmos.io",
+  "homepage": "https://design.pender.io",
   "license": "MIT",
-  "repository": "git@github.com:entercosmos/multiple-select-field.git",
+  "repository": "git@github.com:penderhq/multiple-select-field.git",
   "keywords": [
     "react-component"
   ]

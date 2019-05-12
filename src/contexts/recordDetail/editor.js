@@ -1,11 +1,33 @@
 import React from 'react'
 import {css} from 'emotion'
-import colors from '@cmds/colors'
-import Button from '@cmds/button'
-import OptionList from '@cmds/select/lib/OptionList'
+import colors from '@pndr/colors'
+import Button from '@pndr/button'
+import OptionList from '@pndr/select/lib/OptionList'
 import Option from '../../Option'
 
-
+const EmptyState = ({children}) => (
+    <div
+        className={css`
+            background: #f9f9f9;
+            border-radius: 6px;
+            padding: 30px;
+            text-align: center;
+            @media (min-width: 720px) {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+        `}
+    >
+        <div
+            className={css`
+                color: #000;
+                font-size: 16px;
+            `}
+        >
+            {children}
+        </div>
+    </div>
+)
 
 export default class MultipleSelectField extends React.Component {
 
@@ -110,9 +132,9 @@ export default class MultipleSelectField extends React.Component {
 
                     )
                 }) : (
-                    <div className={css`opacity: 0.7;`}>
-                        No options selected
-                    </div>
+                    <EmptyState>
+                        There are no options selected for this field
+                    </EmptyState>
                 )}
             </div>
         )
