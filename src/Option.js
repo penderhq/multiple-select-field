@@ -14,7 +14,7 @@ export default ({className, option, onRemove}) => (
             font-weight: 400;
             background-color: ${get(colors, [option.colorId, 'backgroundColor'])};
             color: ${get(colors, [option.colorId, 'color'])};
-            border-radius: 9999px;
+            border-radius: 6px;
             line-height: 1.5;
             -webkit-flex: 1 1 auto;
             -ms-flex: 1 1 auto;

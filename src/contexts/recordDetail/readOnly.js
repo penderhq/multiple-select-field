@@ -25,7 +25,7 @@ const Option = ({ option }) => (
                 height: 18px;
                 font-size: 13px;
                 font-weight: 400;
-                    border-radius: 9999px;
+                    border-radius: 6px;
                     max-width: 100%;
                     flex: none;
                     align-items: center;

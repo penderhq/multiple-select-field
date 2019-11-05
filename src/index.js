@@ -23,7 +23,12 @@ export default class MultipleSelectField extends React.Component {
         onLink: PropTypes.func,
         onUnlink: PropTypes.func,
         onClear: PropTypes.func,
-        onSort: PropTypes.func
+        onSort: PropTypes.func,
+        selectAnOptionButtonLabel: PropTypes.string
+    }
+
+    static defaultProps = {
+        selectAnOptionButtonLabel: 'Select an option'
     }
 
     render() {

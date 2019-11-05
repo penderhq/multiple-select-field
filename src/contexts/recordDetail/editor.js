@@ -1,11 +1,11 @@
 import React from 'react'
-import {css} from 'emotion'
+import { css } from 'emotion'
 import colors from '@pndr/colors'
 import Button from '@pndr/button'
 import OptionList from '@pndr/select/lib/OptionList'
 import Option from '../../Option'
 
-const EmptyState = ({children}) => (
+const EmptyState = ({ children }) => (
     <div
         className={css`
             background: #f9f9f9;
@@ -35,7 +35,7 @@ export default class MultipleSelectField extends React.Component {
         open: false
     }
 
-    optionRenderer = ({option}) => {
+    optionRenderer = ({ option }) => {
 
         const color = colors[option.colorId] || defaultColor
 
@@ -55,7 +55,7 @@ export default class MultipleSelectField extends React.Component {
                     padding-right: 8px;
                     line-height: 1.5;
                     -webkit-print-color-adjust: exact;
-                    border-radius: 9999px;
+                    border-radius: 6px;
                     flex: 0 0 auto;
                 `}
             >
@@ -88,9 +88,10 @@ export default class MultipleSelectField extends React.Component {
                         `}
                     >
                         <Button
-                            onClick={() => this.setState({open: true})}
+                            size={'sm'}
+                            onClick={() => this.setState({ open: true })}
                         >
-                            Select an option
+                            {this.props.selectAnOptionButtonLabel}
                         </Button>
                         {this.state.open ? (
                             <OptionList
@@ -101,7 +102,7 @@ export default class MultipleSelectField extends React.Component {
                                 options={options}
                                 optionRenderer={this.optionRenderer}
                                 onOptionClick={this.handleOptionLink}
-                                onClickOutside={() => this.setState({open: false})}
+                                onClickOutside={() => this.setState({ open: false })}
                             />
                         ) : null}
                     </div>
@@ -132,17 +133,17 @@ export default class MultipleSelectField extends React.Component {
 
                     )
                 }) : (
-                    <EmptyState>
-                        There are no options selected for this field
+                        <EmptyState>
+                            There are no options selected for this field
                     </EmptyState>
-                )}
+                    )}
             </div>
         )
     }
 
-    handleOptionLink = ({id}) => {
+    handleOptionLink = ({ id }) => {
 
-        this.setState({open: false})
+        this.setState({ open: false })
 
         if (this.props.onOptionLink) {
             this.props.onOptionLink({
@@ -152,7 +153,7 @@ export default class MultipleSelectField extends React.Component {
         }
     }
 
-    handleOptionUnlink = ({id}) => {
+    handleOptionUnlink = ({ id }) => {
 
         if (this.props.onOptionUnlink) {
             this.props.onOptionUnlink({
