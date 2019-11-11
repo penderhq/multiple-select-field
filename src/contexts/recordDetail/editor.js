@@ -1,8 +1,10 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { css } from 'emotion'
 import colors from '@pndr/colors'
 import Button from '@pndr/button'
 import OptionList from '@pndr/select/lib/OptionList'
+import AdaptiveDialog from '@pndr/adaptive-dialog/lib/AdaptiveDialog'
 import Option from '../../Option'
 
 const EmptyState = ({ children }) => (
@@ -33,6 +35,11 @@ export default class MultipleSelectField extends React.Component {
 
     state = {
         open: false
+    }
+
+    componentDidMount() {
+
+        this.button = ReactDOM.findDOMNode(this.refs.button)
     }
 
     optionRenderer = ({ option }) => {
@@ -88,22 +95,29 @@ export default class MultipleSelectField extends React.Component {
                         `}
                     >
                         <Button
+                            ref={'button'}
                             size={'sm'}
                             onClick={() => this.setState({ open: true })}
                         >
                             {this.props.selectAnOptionButtonLabel}
                         </Button>
                         {this.state.open ? (
-                            <OptionList
-                                className={css`
-                                    margin-top: -21px;
-                                `}
-                                alignLeft={true}
-                                options={options}
-                                optionRenderer={this.optionRenderer}
-                                onOptionClick={this.handleOptionLink}
-                                onClickOutside={() => this.setState({ open: false })}
-                            />
+                            <AdaptiveDialog
+                                referenceElement={this.button}
+                                popoverPlacement={'bottom-start'}
+                                popoverWidth={300}
+                                title={this.props.title}
+                            >
+                                {() => (
+                                    <OptionList
+                                        alignLeft={true}
+                                        options={options}
+                                        optionRenderer={this.optionRenderer}
+                                        onOptionClick={this.handleOptionLink}
+                                        onClickOutside={() => this.setState({ open: false })}
+                                    />
+                                )}
+                            </AdaptiveDialog>
                         ) : null}
                     </div>
                 </div>

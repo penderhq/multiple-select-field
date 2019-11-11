@@ -1,6 +1,6 @@
 {
   "name": "@pndr/multiple-select-field",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Used for selecting multiple options from a list.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -24,6 +24,7 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
+    "@pndr/adaptive-dialog": "0.x",
     "@pndr/button": "0.x",
     "@pndr/colors": "0.x",
     "@pndr/select": "0.x",
@@ -32,10 +33,11 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "@pndr/adaptive-dialog": "^0.2.0",
     "@pndr/button": "^0.10.0",
     "@pndr/colors": "^0.4.0",
     "@pndr/demo-utils": "^0.3.0",
-    "@pndr/select": "^0.9.0",
+    "@pndr/select": "^0.11.0",
     "emotion": "^10.0.9",
     "lodash": "^4.x",
     "nwb": "0.23.x",
